@@ -1,0 +1,192 @@
+//01. Multiply Number by 2
+
+function multiply(n){
+ console.log(n*2); 
+}
+
+
+//02. Excellent grade
+
+function grade(g){
+ if(g >= 5.50){
+  console.log("Excellent");
+ }else{
+   console.log("Not excellent");
+ }
+}
+
+//03. Numbers from 1 to 5
+
+function numbers(){
+    for(let i = 1; i <= 5; i++){
+        console.log(i);
+    }
+
+}
+
+//04. Numbers from N to 1
+
+function numbers(n){
+    while(n > 0){
+        console.log(n);
+        n--;
+    }
+
+}
+
+//05. Numbers from M to N
+
+function numbers(m,n){
+    while(m > n - 1){
+        console.log(m);
+        m--;
+    }
+
+}
+
+//06. Student Information
+
+function student(name,age,grade){
+    let grade1 = grade.toFixed(2);
+    console.log(`Name: ${name}, Age: ${age}, Grade: ${grade1}`);
+
+}
+
+//07. Month Printer
+
+function month(num) {
+    switch (num) {
+      case 1:
+        console.log("January");
+        break;
+      case 2:
+        console.log("February");
+        break;
+      case 3:
+        console.log("March");
+        break;
+      case 4:
+        console.log("April");
+        break;
+      case 5:
+        console.log("May");
+        break;
+      case 6:
+        console.log("June");
+        break;
+      case 7:
+        console.log("July");
+        break;
+      case 8:
+        console.log("August");
+        break;
+      case 9:
+        console.log("September");
+        break;
+      case 10:
+        console.log("October");
+        break;
+      case 11:
+        console.log("November");
+        break;
+      case 12:
+        console.log("December");
+        break;
+      default:
+        console.log("Error!")
+        break;
+    }
+  }
+  
+//08. Foreign Languages
+
+function language(country) {
+  switch (country) {
+    case "England":
+      console.log("English");
+      break;
+    case "USA":
+      console.log("English");
+      break;
+    case "Spain":
+      console.log("Spanish");
+      break;
+    case "Mexico":
+      console.log("Spanish");
+      break;
+    case "Argentina":
+      console.log("Spanish");
+      break;
+
+    default:
+      console.log("unknown");
+      break;
+  }
+}
+
+
+//09. Theatre Promotions
+
+function tickets(day, age){
+    if(age < 0 || age > 122){
+        return console.log("Error!");
+    }
+
+    switch (day) {
+        case "Weekday":
+            if (age >= 0 && age <= 18) {
+                console.log("12$");
+            }else if (age > 18 && age <= 64) {
+                console.log("18$");
+            } else {
+                console.log("12$");
+            }
+            break;
+    
+        case "Weekend":
+            if (age >= 0 && age <= 18) {
+                console.log("15$");
+            }else if (age > 18 && age <= 64) {
+                console.log("20$");
+            } else {
+                console.log("15$");
+            }
+        break;
+
+        case "Holiday":
+            if (age >= 0 && age <= 18) {
+                console.log("5$");
+            }else if (age > 18 && age <= 64) {
+                console.log("12$");
+            } else {
+                console.log("10$");
+            }
+        break;
+
+        default:
+            break;
+    }
+}
+
+//10. Divisible by 3
+
+function divisable() {
+    for (let i = 1; i < 101; i++) {
+        if (i % 3 == 0) {
+            console.log(i);
+        }
+    }
+}
+
+//11. Sum of Odd Numbers
+
+function sumOdd(n) {
+  let sum = 0;
+  let currentNumber = 1;
+  for (let i = 1; i <= n; i++) {
+    console.log(currentNumber);
+    sum += currentNumber;
+    currentNumber += 2;
+  }
+  console.log(`Sum: ${sum}`);
+}
