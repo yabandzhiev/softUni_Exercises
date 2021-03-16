@@ -1,2 +1,2 @@
-# softUni_Exercises
-all of my exercises during js fundamentals module
+# Soft Uni - JS Fundamentals Exercises
+All of my exercises during js fundamentals module
