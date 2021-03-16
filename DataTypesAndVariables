@@ -1,0 +1,101 @@
+//01. Concatenate Names
+function concatenateNames(first,second,third) {
+    console.log(`${first}${third}${second}`);
+}
+
+//02. Right Place
+function rightReplace(string1,char,string2) {
+    let word = string1.replace("_",char);
+    let result = word === string2 ? "Matched" : "Not Matched";
+    console.log(result);
+}
+
+//03. Integer and Float
+function intAndFloat(num1,num2,num3) {
+    let sum = num1+num2+num3;
+    
+    sum % 1 === 0 ? sum+= " - Integer" : sum += " - Float";
+    
+    console.log(sum);
+}
+
+//04. Amazing Numbers
+function amazingNums(num) {
+    
+    num = num.toString();
+    let sum = 0;
+
+    for (let i = 0; i < num.length; i++) {
+        sum += Number(num[i]);
+        
+    }
+
+    let result = sum.toString().includes('9');
+
+    console.log(result ? `${num} Amazing? True` : `${num} Amazing? False`);
+
+}
+
+//05. Gramophone
+function gramophone(band,album,song) {
+    
+    let songDurationSeconds = album.length * band.length * song.length / 2;
+
+    let fullRotation = Math.ceil(songDurationSeconds / 2.5);
+
+    console.log(`The plate was rotated ${fullRotation} times.`);
+}
+
+//06. Fuel Money
+function fuel(distanceToTravel,passengers,priceForLiter) {
+
+    let neededFuel = (distanceToTravel/100)*7;
+    neededFuel += passengers*0.100;
+    let money = neededFuel * priceForLiter;
+    console.log(`Needed money for that trip is ${money}lv.`);
+
+}
+
+//07. Centuries to Minutes
+function centuriesToMins(num) {
+    let years = num * 100;
+    let days = Math.trunc(365.2422 * years);
+    let hours = days * 24;
+    let minutes = hours * 60;
+    console.log(`${num} centuries = ${years} years = ${days} days = ${hours} hours = ${minutes} minutes`);
+}
+
+//08. Special Numbers
+function specialNumbers(num) {
+  let sum = 0;
+  let result = "";
+  for (let i = 1; i <= num; i++) {
+    i = i.toString();
+    for (let j = 0; j < i.length; j++) {
+      sum += Number(i[j]);
+    }
+    result = sum === 5 || sum === 7 || sum === 11;
+    console.log(result ? `${i} -> True` : `${i} -> False`);
+    sum = 0;
+  }
+}
+
+//09. Triples of Latin Letters
+function triples(num) {
+    num = Number(num);
+    let start = 97;
+    let end = start + num;
+    for (let first = start; first < end; first++) {
+        for (let second = start; second < end; second++) {
+            for (let third = start; third < end; third++) {
+                let firstLetter = String.fromCharCode(first);
+                let secondLetter = String.fromCharCode(second);
+                let thirdLetter = String.fromCharCode(third);
+
+                console.log(`${firstLetter}${secondLetter}${thirdLetter}`);
+            }
+            
+        }
+        
+    }
+}
